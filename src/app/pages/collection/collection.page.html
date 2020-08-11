@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Our Collection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Our Collection</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row *ngFor="let item of [1, 2, 3, 4]">
+      <ion-col size="6">
+        <ion-card>
+          <img src="../../../assets/weedsample.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Indica</ion-card-subtitle>
+            <ion-card-title>Pink Kush</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-subtitle>Description</ion-card-subtitle>
+            <ion-card-subtitle>$75 per 1/4 oz.</ion-card-subtitle>
+            <ion-button>Add to Cart</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <img src="../../../assets/weedsample.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Sativa</ion-card-subtitle>
+            <ion-card-title>Sour Diesel</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-subtitle>Description</ion-card-subtitle>
+            <ion-card-subtitle>$75 per 1/4 oz.</ion-card-subtitle>
+            <ion-button>Add to Cart</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

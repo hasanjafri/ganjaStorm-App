@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Your Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Your Cart</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-list-header>
+      Your Cart
+    </ion-list-header>
+  </ion-list>
+  <ion-item *ngFor="let food of shop; let i = index;">
+    <ion-avatar slot="start">
+      <img src="../../../assets/weedsample.jpg">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ food.name }} </h2>
+      <h3>{{ food.qty }} x ${{ food.price }} </h3>
+      <p>${{ food.qty * food.price }}</p>
+    </ion-label>
+    <ion-icon name="add-circle" (click)="incrementQty(i)" item-right></ion-icon>
+    <ion-icon name="remove-circle" (click)="decrementQty(i)" item-right></ion-icon>
+  </ion-item>
+
+  <ion-button [routerLink]="'/checkout'" class="ion-margin-top" color="success" expand="full">Checkout</ion-button>
+</ion-content>
